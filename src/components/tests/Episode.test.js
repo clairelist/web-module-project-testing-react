@@ -26,6 +26,11 @@ const nullImgEp = {
     runtime: '69:69'
     };
 
+const stimmt=(variable)=>{
+    return expect(variable).toBeTruthy();
+}
+//--i made a wrapping function because the word 'truthy' is extremly cringe, as the kids say.
+
 test("renders without error", () => {
     render(<Episode episode={testEpisode} />);
 });
@@ -36,7 +41,7 @@ test("renders the summary test passed as prop", ()=>{
     const summarySel = screen.queryByText('Test Summaryryi Hey remember when I used to write things ahahahahaha');
 
     expect(summarySel).toBeInTheDocument();
-    expect(summarySel).toBeTruthy();
+    stimmt(summarySel);
     expect(summarySel).toHaveTextContent('Test Summaryryi Hey remember when I used to write things ahahahahaha');
 
     //note from past Claire:: toHaveValue() can only be used for input fields ie.
