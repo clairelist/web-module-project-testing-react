@@ -16,6 +16,16 @@ summary: 'Test Summaryryi Hey remember when I used to write things ahahahahaha',
 runtime: '69:69'
 };
 
+const nullImgEp = {
+    id: 1,
+    image: null,
+    name: 'Test Name',
+    season: 1,
+    number: 1,
+    summary: 'Test Summaryryi Hey remember when I used to write things ahahahahaha',
+    runtime: '69:69'
+    };
+
 test("renders without error", () => {
     render(<Episode episode={testEpisode} />);
 });
@@ -34,6 +44,9 @@ test("renders the summary test passed as prop", ()=>{
 });
 
 test("renders default image when image is not defined", ()=>{
-    render(<Episode episode={testEpisode} />);
+    render(<Episode episode={nullImgEp} />);
+
+    const imgSel = screen.queryByAltText('https://i.ibb.co/2FsfXqM/stranger-things.png');
+    expect(imgSel).toBeInTheDocument();
 
 });
