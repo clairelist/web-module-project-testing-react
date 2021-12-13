@@ -26,7 +26,7 @@ const nullImgEp = {
     runtime: '69:69'
     };
 
-const stimmt=(variable)=>{
+export const stimmt=(variable)=>{
     return expect(variable).toBeTruthy();
 }
 //--i made a wrapping function because the word 'truthy' is extremly cringe, as the kids say.
