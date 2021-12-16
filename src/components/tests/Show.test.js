@@ -89,4 +89,4 @@ test('component renders when no seasons are selected and when rerenders with a s
 // * [X] Test that the Loading component displays when null is passed into the show prop (look at the Loading component to see how to test for it's existence)
 // * [X] Test that when your test data is passed through the show prop, the same number of season select options appear as there are seasons within your test data.
 // * [X] Test that when an item is selected, the handleSelect function is called. Look at your code to see how to get access to the select DOM element and [userEvent reference materials](https://testing-library.com/docs/ecosystem-user-event/) to see how to trigger a selection.
-// * [ ] Test that the episode component DOES NOT render when the selectedSeason props is "none" and DOES render the episode component when the selectedSeason prop has a valid season index.
+// * [X] Test that the episode component DOES NOT render when the selectedSeason props is "none" and DOES render the episode component when the selectedSeason prop has a valid season index.
